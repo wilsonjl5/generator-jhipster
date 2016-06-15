@@ -1,0 +1,6 @@
+com/ippon/angular2test/service/UserServiceIntTest.class
+com/ippon/angular2test/web/rest/AuditResourceIntTest.class
+com/ippon/angular2test/web/rest/UserResourceIntTest.class
+com/ippon/angular2test/security/SecurityUtilsUnitTest.class
+com/ippon/angular2test/web/rest/AccountResourceIntTest.class
+com/ippon/angular2test/web/rest/TestUtil.class
