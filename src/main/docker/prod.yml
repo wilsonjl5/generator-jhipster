@@ -1,0 +1,7 @@
+angular2test-mongodb:
+  container_name: angular2test-mongodb
+  image: mongo:3.0.7
+  # volumes:
+  #   - ~/volumes/jhipster/angular2test/mongodb/:/data/db/
+  ports:
+    - "27017:27017"

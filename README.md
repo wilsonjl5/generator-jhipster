@@ -1,20 +1,75 @@
-[![Logo][jhipster-image]][jhipster-url]
+# angular2test
 
-Greetings, Java Hipster!
+This application was generated using JHipster, you can find documentation and help at [https://jhipster.github.io](https://jhipster.github.io).
 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+Before you can build this project, you must install and configure the following dependencies on your machine:
 
-Full documentation and information is available on our website at [http://jhipster.github.io/][jhipster-url]
+1. [Node.js][]: We use Node to run a development web server and build the project.
+   Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 
-Please read our [guidelines](/CONTRIBUTING.md#submitting-an-issue) before submitting an issue. If your issue is a bug, please use the bug template pre populated [here](https://github.com/jhipster/generator-jhipster/issues/new). For feature requests and queries you can use [this template][feature-template].
+After installing Node, you should be able to run the following command to install development tools (like
+[Bower][] and [BrowserSync][]). You will only need to run this command when dependencies change in package.json.
 
-[jhipster-image]: https://raw.githubusercontent.com/jhipster/jhipster.github.io/master/img/logo-jhipster2x.png
-[jhipster-url]: http://jhipster.github.io/
-[npm-image]: https://badge.fury.io/js/generator-jhipster.svg
-[npm-url]: https://npmjs.org/package/generator-jhipster
-[travis-image]: https://travis-ci.org/jhipster/generator-jhipster.svg?branch=master
-[travis-url]: https://travis-ci.org/jhipster/generator-jhipster
-[daviddm-image]: https://david-dm.org/jhipster/generator-jhipster.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/jhipster/generator-jhipster
-[feature-template]: https://github.com/jhipster/generator-jhipster/issues/new?body=*%20**Overview%20of%20the%20request**%0A%0A%3C!--%20what%20is%20the%20query%20or%20request%20--%3E%0A%0A*%20**Motivation%20for%20or%20Use%20Case**%20%0A%0A%3C!--%20explain%20why%20this%20is%20a%20required%20for%20you%20--%3E%0A%0A%0A*%20**Browsers%20and%20Operating%20System**%20%0A%0A%3C!--%20is%20this%20a%20problem%20with%20all%20browsers%20or%20only%20IE8%3F%20--%3E%0A%0A%0A*%20**Related%20issues**%20%0A%0A%3C!--%20has%20a%20similar%20issue%20been%20reported%20before%3F%20--%3E%0A%0A*%20**Suggest%20a%20Fix**%20%0A%0A%3C!--%20if%20you%20can%27t%20fix%20this%20yourself%2C%20perhaps%20you%20can%20point%20to%20what%20might%20be%0A%20%20causing%20the%20problem%20(line%20of%20code%20or%20commit)%20--%3E
+    npm install
 
+We use [Gulp][] as our build system. Install the Gulp command-line tool globally with:
+
+    npm install -g gulp
+
+Run the following commands in two separate terminals to create a blissful development experience where your browser
+auto-refreshes when files change on your hard drive.
+
+    mvn
+    gulp
+
+Bower is used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
+specifying a newer version in `bower.json`. You can also run `bower update` and `bower install` to manage dependencies.
+Add the `-h` flag on any command to see how you can use it. For example, `bower update -h`.
+
+# Building for production
+
+To optimize the angular2test client for production, run:
+
+    mvn -Pprod clean package
+
+This will concatenate and minify CSS and JavaScript files. It will also modify `index.html` so it references
+these new files.
+
+To ensure everything worked, run:
+
+    java -jar target/*.war --spring.profiles.active=prod
+
+Then navigate to [http://localhost:8080](http://localhost:8080) in your browser.
+
+# Testing
+
+Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in `src/test/javascript` and can be run with:
+
+    gulp test
+
+
+
+# Continuous Integration
+
+To setup this project in Jenkins, use the following configuration:
+
+* Project name: `angular2test`
+* Source Code Management
+    * Git Repository: `git@github.com:xxxx/angular2test.git`
+    * Branches to build: `*/master`
+    * Additional Behaviours: `Wipe out repository & force clone`
+* Build Triggers
+    * Poll SCM / Schedule: `H/5 * * * *`
+* Build
+    * Invoke Maven / Tasks: `-Pprod clean package`
+* Post-build Actions
+    * Publish JUnit test result report / Test Report XMLs: `build/test-results/*.xml`
+
+[JHipster]: https://jhipster.github.io/
+[Node.js]: https://nodejs.org/
+[Bower]: http://bower.io/
+[Gulp]: http://gulpjs.com/
+[BrowserSync]: http://www.browsersync.io/
+[Karma]: http://karma-runner.github.io/
+[Jasmine]: http://jasmine.github.io/2.0/introduction.html
+[Protractor]: https://angular.github.io/protractor/

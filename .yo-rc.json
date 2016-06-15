@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "angular2test",
+    "packageName": "com.ippon.angular2test",
+    "packageFolder": "com/ippon/angular2test",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "no",
+    "useSass": true,
+    "buildTool": "maven",
+    "frontendBuilder": "gulp",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "b867d191d244855e06da8dd6db38fd4897cfbe80",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}
